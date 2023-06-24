@@ -1,0 +1,65 @@
+<section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <span>Contato</span>
+        <h2>Contato</h2>
+        <p>Queremos ouvir de você! Se você tem alguma dúvida, sugestão, ou simplesmente  <br> 
+          quer compartilhar sua experiência conosco, não hesite em enviar um e-mail.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Localização:</h4>
+              <p>Av. Vitória, 2220 - Monte Belo, Vitória - ES, 29053-360</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>faesa@email.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Telefone:</h4>
+              <p>(27) 2122-4100</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14966.969010364892!2d-40.314429!3d-20.3109331!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb83d795ed25e97%3A0xe9dc9ffed3b11775!2sFAESA%20%7C%20Centro%20Universit%C3%A1rio%20-%20Campus%20Vit%C3%B3ria!5e0!3m2!1spt-BR!2sbr!4v1687438593615!5m2!1spt-BR!2sbr" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>            
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form [formGroup]="formulario" (ngSubmit)="EnviarPorForm()" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Seu nome</label>
+                <input formControlName="nome" type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <label for="name">Seu telefone</label>
+                <input formControlName="telefone"type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="name">Seu email</label>
+              <input formControlName="email" type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <label for="name">Mensagem</label>
+              <textarea formControlName="mensagem" class="form-control" name="message" rows="10" required></textarea>
+            </div>
+
+            <div class="text-center"><button type="submit">Enviar</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>

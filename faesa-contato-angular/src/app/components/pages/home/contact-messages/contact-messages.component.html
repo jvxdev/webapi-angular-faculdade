@@ -1,0 +1,25 @@
+<section id="team" class="team" *ngIf="mensagens.length > 0">
+  <div class="container">
+
+    <div class="section-title">
+      <span>MENSAGENS ENVIADAS</span>
+      <h2>MENSAGENS ENVIADAS</h2>
+      <p>Aqui vão algumas das mensagens de contato enviadas e salvas em nossa base de dados! =D</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-3 d-flex justify-content-center" *ngFor="let mensagem of mensagens">
+        <div class="member">
+          <h4>{{mensagem.nome}}</h4>
+          <span>{{mensagem.email}}</span>
+          <p>
+            {{mensagem.mensagem}}
+          </p>
+          <div class="social">
+            <a href="mailto:{{mensagem.email}}"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
