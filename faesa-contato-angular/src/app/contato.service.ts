@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Contato } from './Contato';
 
-const httpOptions = {
+const httpOptions: { readonly headers: HttpHeaders } = {
   headers: new HttpHeaders({
-    'Content-Type':'application/json'
+    'Content-Type': 'application/json'
   })
-}
+};
 
 @Injectable({
   providedIn: 'root'
